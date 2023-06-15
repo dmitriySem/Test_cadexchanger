@@ -127,7 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Curve.cpp" />
+    <ClCompile Include="Ellipse.cpp" />
+    <ClCompile Include="Helix.cpp" />
     <ClCompile Include="Test_cadexchanger.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\dsemenov\Desktop\CADEX C++ assignment v4 for probationers.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Curve.h" />
+    <ClInclude Include="Ellipse.h" />
+    <ClInclude Include="Helix.h" />
+    <ClInclude Include="Point.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
