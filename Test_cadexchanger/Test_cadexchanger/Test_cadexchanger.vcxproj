@@ -127,15 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Curve.cpp" />
+    <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Ellipse.cpp" />
     <ClCompile Include="Helix.cpp" />
+    <ClCompile Include="Point.cpp" />
     <ClCompile Include="Test_cadexchanger.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="C:\Users\dsemenov\Desktop\CADEX C++ assignment v4 for probationers.pdf" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Circle.h" />
     <ClInclude Include="Curve.h" />
     <ClInclude Include="Ellipse.h" />
     <ClInclude Include="Helix.h" />

@@ -2,22 +2,19 @@
 class Point
 {
 public:
-	double* getCoord();
+
 	Point(double x, double y, double z);
 	~Point();
+
+	void setX(double x);
+	void setY(double y);
+	void setZ(double z);
+
+	double getX();
+	double getY();
+	double getZ();
 
 private:
 	double coord[3];
 };
 
-Point::Point(double x, double y, double z)
-{
-	this->coord[0] = x;
-	this->coord[1] = y;
-	this->coord[2] = z;
-}
-
-Point::~Point()
-{
-	delete coord;
-}

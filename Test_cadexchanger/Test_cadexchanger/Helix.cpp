@@ -2,13 +2,20 @@
 
 
 
-Helix::Helix()
-{
-}
+
+Helix::Helix(double Rx, double Ry, double Hz) {
+    this->Rx = Rx;
+    this->Ry = Ry;
+    this->Hz = Hz;
+
+    this->point = nullptr;
+    this->pointFirstDerivative = nullptr;
+};
 
 Helix::~Helix()
 {
-
+    delete point;
+    delete pointFirstDerivative;
 }
 
 double Helix::getRx()
@@ -39,31 +46,47 @@ double Helix::getY(double t)
 
 double Helix::getZ(double t)
 {    
-    return getHz()*t;
+    return getHz()*t; //шаг спирали???
 }
 
-void Helix::setRx(double Rx)
-{
-    this->Rx = Rx;
-}
-
-void Helix::setRy(double Ry)
-{
-    this->Ry = Ry;
-}
-
-void Helix::setHz(double Hz)
-{
-    this->Hz = Hz;
-}
+//void Helix::setRx(double Rx)
+//{
+//    this->Rx = Rx;
+//}
+//
+//void Helix::setRy(double Ry)
+//{
+//    this->Ry = Ry;
+//}
+//
+//void Helix::setHz(double Hz)
+//{
+//    this->Hz = Hz;
+//}
 
 Point* Helix::getPoint(double t)
 {
-    //Point* pt = new Point(getX() );
-    return nullptr;
+    return this->point =
+        new Point(getX(t),getY(t), getZ(t));
 }
 
 Point* Helix::getFirstDerivative(double t)
 {
-    return nullptr;
+    return this->pointFirstDerivative =
+        new  Point(getFirstDerivativeX(t), getFirstDerivativeY(t), getFirstDerivativeZ(t));
+}
+
+double Helix::getFirstDerivativeX(double t)
+{
+    return -getRx()*sin(t);
+}
+
+double Helix::getFirstDerivativeY(double t)
+{
+    return getRy()*cos(t);
+}
+
+double Helix::getFirstDerivativeZ(double t)
+{
+    return getHz(); //шаг спирали???
 }

@@ -5,12 +5,15 @@
 class Ellipse : public Helix
 {
 public:
-	Ellipse(double Rx, double Ry)
+	Ellipse(double Rx, double Ry) : Helix(Rx, Ry, 0)
 	{
 
-		this->Rx = Rx;
-		this->Ry = Ry;
-		this->Hz = 0;
+		//this->Rx = Rx;
+		//this->Ry = Ry;
+		//this->Hz = 0;
+
+		//this->point = nullptr;
+		//this->pointFirstDerivative = nullptr;
 
 	};
 
@@ -24,11 +27,5 @@ public:
 	double getFirstDerivativeY(double t);
 	double getFirstDerivativeZ(double t);
 
-private:
-	double Rx;
-	double Ry;
-	double Hz;
-
-	
 };
 
